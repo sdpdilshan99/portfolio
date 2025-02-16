@@ -31,34 +31,35 @@ const Header = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center pt-32">
-      <div>
+    <div id="home" className="flex flex-col items-center pt-32 mb-10">
+      <div className="mb-5">
         <Image
           src={assets.profile_img}
           alt="profile-img"
           className=" rounded-full w-32"
         />
       </div>
-      <h3 className="flex items-center text-xl md:text-2xl font-Outfit">Hi,</h3>
+      <h3 className="text-center text-xl  ">Hi,</h3>
 
-      <h1 className="flex items-center gap-2 text-xl md:text-4xl tracking-wide font-Outfit">
+      <h1 className="flex text-center gap-2 text-xl sm:text-3xl lg:text-4xl tracking-wide mb-5">
         I'm Sadeep Dilshan
-        <Image src={assets.hand_icon} alt="hand-image" className=" w-6" />
+        <Image
+          src={assets.hand_icon}
+          alt="hand-image"
+          className="w-4 lg:w-8 sm:w-6"
+        />
       </h1>
 
-      <h1 className="text-3xl sm:text-4xl lg:text-6xl font-Outfit text-violet-600 tracking-wide">
+      <h1 className=" text-center text-4xl sm:text-5xl lg:text-6xl font-[500] text-violet-600 tracking-wide">
         Full Stack Developer
       </h1>
 
-      <p className=" max-w-2xl mx-auto pt-4 font-Outfit tracking-wide">
-        I am a frontend developer from Tangalle, Sri Lanka with 6 months of
-        experience
-      </p>
+      <p className=" max-w-2xl mx-auto pt-4 font-Outfit tracking-wide"></p>
 
       <div className="flex flex-col sm:flex-row items-center gap-6 mt-28">
         <a
           href="#contact"
-          className="primary-btn"
+          className="primary-btn font-Outfit"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
@@ -68,12 +69,47 @@ const Header = () => {
         <a
           href="/sample-resume.pdf"
           download
-          className=" primary-btn second-btn "
+          className=" primary-btn second-btn  font-Outfit"
           onMouseEnter={handleMouseEnter1}
           onMouseLeave={handleMouseLeave1}
         >
           Get CV
           <Image src={imgSrc1} alt="download-icon" className=" w-4" />
+        </a>
+      </div>
+
+      <div className="flex mt-20 gap-4">
+        <a href="" className="">
+          <Image src={assets.twitter_icon} alt="twitter-icon" className="w-5" />
+        </a>
+
+        <a href="">
+          <Image
+            src={assets.instagram_icon}
+            alt="intsta-icon"
+            className=" w-5"
+          />
+        </a>
+        <a href="">
+          <Image src={assets.facebook_icon} alt="fb-icon" className=" w-5" />
+        </a>
+        <a
+          href="https://linkedin.com/in/sadeeprdilshan"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src={assets.linkedin_icon}
+            alt="linkedin-icon"
+            className=" w-5"
+          />
+        </a>
+        <a
+          href="https://github.com/sdpdilshan99"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image src={assets.github_icon} alt="github-icon" className=" w-5" />
         </a>
       </div>
     </div>

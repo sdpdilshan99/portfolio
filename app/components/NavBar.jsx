@@ -2,10 +2,11 @@
 
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function NavBar() {
   const sideMenuRef = useRef();
+  const [isScroll, setIsScroll] = useState(false);
 
   const openMenu = () => {
     sideMenuRef.current.style.transform = "translateX(-16rem)";
@@ -13,6 +14,16 @@ function NavBar() {
   const closeMenu = () => {
     sideMenuRef.current.style.transform = "translateX(16rem)";
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (scrollY > 50) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    });
+  }, []);
 
   return (
     <>
@@ -23,42 +34,60 @@ function NavBar() {
           className="w-full"
         />
       </div>
-      <nav className="w-full fixed px-5 lg:px-8 xl:px-10 mt-1 flex items-center justify-between z-50 ">
+      <nav
+        className={`w-full fixed px-5 h-9 lg:px-8 xl:px-10 mt-1 flex items-center justify-between z-50 
+        ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}`}
+      >
         <a href="">
           <Image
             src={assets.logo}
             alt="name-logo"
-            className="w-28 cursor-pointer mr-14"
+            className="w-28 cursor-pointer mr-14 "
           />
         </a>
 
         <div className=" ">
           <ul
-            className="hidden md:flex items-center gap-5 lg:gap-7 rounded-full px-8 py-1.5
-        bg-white shadow-sm bg-opacity-50"
+            className="hidden md:flex items-center
+            shadow-sm bg-opacity-50 text-[20px] text-[#140530]"
           >
             <li>
-              <a href="#top" className="font-Montserrat">
+              <a
+                href="#home"
+                className="font-Outfit font-normal hover:bg-violet-500 hover:rounded-sm py-1 px-3 hover:text-white"
+              >
                 Home
               </a>
             </li>
             <li>
-              <a href="#top" className="font-Montserrat">
+              <a
+                href="#about"
+                className="font-Outfit hover:bg-violet-500 hover:rounded-sm py-1 px-3 hover:text-white"
+              >
                 About me
               </a>
             </li>
             <li>
-              <a href="#top" className="font-Montserrat">
+              <a
+                href="#service"
+                className="font-Outfit hover:bg-violet-500 hover:rounded-sm py-1 px-3 hover:text-white"
+              >
                 Services
               </a>
             </li>
             <li>
-              <a href="#top" className="font-Montserrat">
+              <a
+                href="#project"
+                className="font-Outfit hover:bg-violet-500 hover:rounded-sm py-1 px-3 hover:text-white"
+              >
                 Projects
               </a>
             </li>
             <li>
-              <a href="#top" className="font-Montserrat">
+              <a
+                href="#contact"
+                className="font-Outfit hover:bg-violet-500 hover:rounded-sm py-1 px-3 hover:text-white"
+              >
                 Contact me
               </a>
             </li>
@@ -71,7 +100,7 @@ function NavBar() {
           </button>
 
           <button className="block md:hidden ml-3" onClick={openMenu}>
-            <Image src={assets.menu_black} alt="mecu-icon" className="w-6" />
+            <Image src={assets.menu_black} alt="menu-icon" className="w-6" />
           </button>
         </div>
 
@@ -91,27 +120,27 @@ function NavBar() {
           </div>
 
           <li>
-            <a href="#top" onClick={closeMenu} className="font-Montserrat">
+            <a href="#home" onClick={closeMenu} className="font-Montserrat">
               Home
             </a>
           </li>
           <li>
-            <a href="#top" onClick={closeMenu} className="font-Montserrat">
+            <a href="#about" onClick={closeMenu} className="font-Montserrat">
               About me
             </a>
           </li>
           <li>
-            <a href="#top" onClick={closeMenu} className="font-Montserrat">
+            <a href="#service" onClick={closeMenu} className="font-Montserrat">
               Services
             </a>
           </li>
           <li>
-            <a href="#top" onClick={closeMenu} className="font-Montserrat">
+            <a href="#project" onClick={closeMenu} className="font-Montserrat">
               Projects
             </a>
           </li>
           <li>
-            <a href="#top" onClick={closeMenu} className="font-Montserrat">
+            <a href="#contact" onClick={closeMenu} className="font-Montserrat">
               Contact me
             </a>
           </li>

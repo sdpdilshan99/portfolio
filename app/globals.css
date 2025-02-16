@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  font-family: Outfit;
+  font-family: Montserrat;
   font-weight: 100;
 }
 
@@ -53,4 +53,8 @@
   border: double 2px transparent;
   box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
   color: #fff;
+}
+
+.aa {
+  background-color: rgba(0, 0, 0, 0.5);
 }

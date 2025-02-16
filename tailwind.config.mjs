@@ -17,6 +17,10 @@ export default {
         Montserrat: ["Montserrat", "sans-serif"],
         Outfit: ["Outfit", "serif"],
       },
+      boxShadow: {
+        balck: "4px 4px 0 #000",
+        white: "4px 4px 0 #fff",
+      },
     },
   },
   plugins: [],
