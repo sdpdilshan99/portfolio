@@ -48,8 +48,8 @@ function NavBar() {
 
         <div className=" ">
           <ul
-            className="hidden md:flex items-center
-            shadow-sm bg-opacity-50 text-[20px] text-[#140530]"
+            className={`hidden md:flex items-center text-[20px] text-[#140530] 
+              ${isScroll ? "" : "shadow-sm bg-opacity-50"}`}
           >
             <li>
               <a

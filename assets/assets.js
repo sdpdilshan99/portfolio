@@ -41,6 +41,13 @@ import github_icon from "./github.png";
 import linkedin_icon from "./linkedin.png";
 import instagram_icon from "./instagram.png";
 import twitter_icon from "./twitter.png";
+import nodejs_icon from "./nodejs.png";
+import tailwind_icon from "./tailwind.png";
+import intellij_icon from "./intelijidea.png";
+import frontend_icon from "./frontend.png";
+import backend_icon from "./backend.png";
+import mern_icon from "./mern.png";
+import api_icon from "./api.png";
 
 export const assets = {
   user_image,
@@ -86,6 +93,13 @@ export const assets = {
   github_icon,
   instagram_icon,
   twitter_icon,
+  nodejs_icon,
+  tailwind_icon,
+  intellij_icon,
+  frontend_icon,
+  backend_icon,
+  mern_icon,
+  api_icon,
 };
 
 export const workData = [
@@ -113,29 +127,45 @@ export const workData = [
 
 export const serviceData = [
   {
-    icon: assets.web_icon,
-    title: "Web design",
-    description: "Web development is the process of building, programming...",
+    icon: assets.frontend_icon,
+    title: "Frontend Development",
+    description:
+      "I craft responsive, interactive, and visually engaging user interfaces with a strong focus on performance. Using technologies like HTML, CSS, JavaScript, and frameworks like Angular and React, I ensure that users have a seamless experience across all devices.",
     link: "",
   },
   {
-    icon: assets.mobile_icon,
-    title: "Mobile app",
+    icon: assets.backend_icon,
+    title: "Backend Development",
     description:
-      "Mobile app development involves creating software for mobile devices...",
+      "I build the powerful backend systems that keep your web applications running smoothly. From setting up databases to creating APIs, I ensure your app is fast, secure, and scalable, delivering seamless functionality behind the scenes.",
+    link: "",
+  },
+  {
+    icon: assets.mern_icon,
+    title: "MERN Stack Development",
+    description:
+      "Using the MERN stack (MongoDB, Express, React, and Node), I build fast, dynamic web applications that are reliable and easy to scale. Whether you need a custom feature or a full platform, I bring your vision to life with modern tools and practices.",
+    link: "",
+  },
+  {
+    icon: assets.api_icon,
+    title: "API Development & Integration",
+    description:
+      "Whether you need to create a new API or connect your app to third-party services, I provide API development and integration that ensures everything works together smoothly, allowing for easy data exchange and seamless user experiences.",
     link: "",
   },
   {
     icon: assets.ui_icon,
     title: "UI/UX design",
     description:
-      "UI/UX design focuses on creating a seamless user experience...",
+      "I design user-friendly and visually stunning interfaces that keep users engaged. By focusing on both usability and aesthetics, I create seamless experiences that make your app or website easy to navigate and enjoyable to use.",
     link: "",
   },
   {
     icon: assets.graphics_icon,
     title: "Graphics design",
-    description: "Creative design solutions to enhance visual communication...",
+    description:
+      "I create visually compelling designs that elevate your brand’s identity. Whether it’s logos, marketing materials, or web design assets, I bring your ideas to life with a strong focus on creativity, clarity, and consistency. Let’s make your brand stand out with beautiful, functional designs.",
     link: "",
   },
 ];
@@ -162,9 +192,10 @@ export const infoList = [
 ];
 
 export const toolsData = [
-  assets.vscode,
-  assets.firebase,
-  assets.mongodb,
-  assets.figma,
-  assets.git,
+  { icon: assets.vscode, name: "vscode" },
+  { icon: assets.tailwind_icon, name: "tailwind css" },
+  { icon: assets.mongodb, name: "mongodb" },
+  { icon: assets.figma, name: "figma" },
+  { icon: assets.intellij_icon, name: "intellij idea" },
+  { icon: assets.git, name: "git" },
 ];

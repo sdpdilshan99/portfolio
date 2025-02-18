@@ -20,6 +20,7 @@ export default {
       boxShadow: {
         balck: "4px 4px 0 #000",
         white: "4px 4px 0 #fff",
+        shadowhh: "4px 4px 5px rgba(0, 0, 0, 0.5)",
       },
     },
   },
