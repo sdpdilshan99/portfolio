@@ -48,6 +48,8 @@ import frontend_icon from "./frontend.png";
 import backend_icon from "./backend.png";
 import mern_icon from "./mern.png";
 import api_icon from "./api.png";
+import twitter_dark_icon from "./twitter_dark.png";
+import github_dark_icon from "./github-dark.png";
 
 export const assets = {
   user_image,
@@ -100,23 +102,30 @@ export const assets = {
   backend_icon,
   mern_icon,
   api_icon,
+  twitter_dark_icon,
+  github_dark_icon,
 };
 
 export const workData = [
   {
-    title: "Frontend project",
-    description: "Web Design",
+    title: "Blog App",
+    description: "Web",
     bgImage: "/work-1.png",
   },
   {
-    title: "Geo based app",
-    description: "Mobile App",
+    title: "Todo App",
+    description: "Web",
     bgImage: "/work-2.png",
   },
   {
-    title: "Photography site",
-    description: "Web Design",
+    title: "Simple User Management System",
+    description: "Web",
     bgImage: "/work-3.png",
+  },
+  {
+    title: "Portfolio",
+    description: "Web",
+    bgImage: "/work-4.png",
   },
   {
     title: "UI/UX designing",

@@ -3,7 +3,7 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useState } from "react";
 
-const Header = () => {
+const Header = ({ isDarkMode }) => {
   const [imgSrc, setImgSrc] = useState(assets.right_arrow_white);
   const [imgSrc1, setImgSrc1] = useState(assets.download_icon);
 
@@ -50,13 +50,16 @@ const Header = () => {
         />
       </h1>
 
-      <h1 className=" text-center text-4xl sm:text-5xl lg:text-6xl font-[500] text-violet-600 tracking-wide">
+      <h1
+        className={` text-center text-4xl sm:text-5xl lg:text-6xl font-[500] tracking-wide
+      ${isDarkMode ? "text-violet-400" : "text-violet-700"} `}
+      >
         Full Stack Developer
       </h1>
 
       <p className=" max-w-2xl mx-auto pt-4 font-Outfit tracking-wide"></p>
 
-      <div className="flex flex-col sm:flex-row items-center gap-6 mt-28">
+      <div className="flex flex-col sm:flex-row items-center gap-6 mt-20">
         <a
           href="#contact"
           className="primary-btn font-Outfit"
@@ -78,9 +81,13 @@ const Header = () => {
         </a>
       </div>
 
-      <div className="flex mt-20 gap-4">
+      <div className="flex mt-10 gap-4">
         <a href="" className="">
-          <Image src={assets.twitter_icon} alt="twitter-icon" className="w-5" />
+          <Image
+            src={isDarkMode ? assets.twitter_dark_icon : assets.twitter_icon}
+            alt="twitter-icon"
+            className="w-5"
+          />
         </a>
 
         <a href="">
@@ -109,7 +116,11 @@ const Header = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image src={assets.github_icon} alt="github-icon" className=" w-5" />
+          <Image
+            src={isDarkMode ? assets.github_dark_icon : assets.github_icon}
+            alt="github-icon"
+            className=" w-5"
+          />
         </a>
       </div>
     </div>

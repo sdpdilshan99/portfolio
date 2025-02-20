@@ -11,7 +11,7 @@ export default {
       colors: {
         lightHover: "#fcf4ff",
         darkHover: "#2a004a",
-        darkTheme: "#11001F",
+        darkTheme: "#140530",
       },
       fontFamily: {
         Montserrat: ["Montserrat", "sans-serif"],
@@ -22,7 +22,11 @@ export default {
         white: "4px 4px 0 #fff",
         shadowhh: "4px 4px 5px rgba(0, 0, 0, 0.5)",
       },
+      gridTemplateColumns: {
+        auto: "repeat(auto-fit, minmax(400px, 1fr))",
+      },
     },
   },
+  darkMode: "selector",
   plugins: [],
 };

@@ -4,7 +4,7 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
-function NavBar() {
+function NavBar({ isDarkMode, setIsDarkMode }) {
   const sideMenuRef = useRef();
   const [isScroll, setIsScroll] = useState(false);
 
@@ -27,7 +27,7 @@ function NavBar() {
 
   return (
     <>
-      <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+      <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
         <Image
           src={assets.header_bg_color}
           alt="header-bg-color"
@@ -36,11 +36,13 @@ function NavBar() {
       </div>
       <nav
         className={`w-full fixed px-5 h-9 lg:px-8 xl:px-10 mt-1 flex items-center justify-between z-50 
-        ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}`}
+        ${isScroll ? " bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}
+        ${isDarkMode ? "bg-violet-950" : "bg-violet-50"}
+        `}
       >
         <a href="">
           <Image
-            src={assets.logo}
+            src={isDarkMode ? assets.logo_dark : assets.logo}
             alt="name-logo"
             className="w-28 cursor-pointer mr-14 "
           />
@@ -48,13 +50,16 @@ function NavBar() {
 
         <div className=" ">
           <ul
-            className={`hidden md:flex items-center text-[20px] text-[#140530] 
+            className={`hidden md:flex items-center text-[20px] 
+              ${
+                isDarkMode ? "text-white hover:text-white" : "text-[#140530] "
+              }  
               ${isScroll ? "" : "shadow-sm bg-opacity-50"}`}
           >
             <li>
               <a
                 href="#home"
-                className="font-Outfit font-normal hover:bg-violet-500 hover:rounded-sm py-1 px-3 hover:text-white"
+                className="font-Outfit font-normal hover:bg-violet-500 hover:rounded-sm py-1 px-3 "
               >
                 Home
               </a>
@@ -62,7 +67,7 @@ function NavBar() {
             <li>
               <a
                 href="#about"
-                className="font-Outfit hover:bg-violet-500 hover:rounded-sm py-1 px-3 hover:text-white"
+                className="font-Outfit hover:bg-violet-500 hover:rounded-sm py-1 px-3 "
               >
                 About me
               </a>
@@ -70,7 +75,7 @@ function NavBar() {
             <li>
               <a
                 href="#service"
-                className="font-Outfit hover:bg-violet-500 hover:rounded-sm py-1 px-3 hover:text-white"
+                className="font-Outfit hover:bg-violet-500 hover:rounded-sm py-1 px-3 "
               >
                 Services
               </a>
@@ -78,7 +83,7 @@ function NavBar() {
             <li>
               <a
                 href="#project"
-                className="font-Outfit hover:bg-violet-500 hover:rounded-sm py-1 px-3 hover:text-white"
+                className="font-Outfit hover:bg-violet-500 hover:rounded-sm py-1 px-3 "
               >
                 Projects
               </a>
@@ -86,7 +91,7 @@ function NavBar() {
             <li>
               <a
                 href="#contact"
-                className="font-Outfit hover:bg-violet-500 hover:rounded-sm py-1 px-3 hover:text-white"
+                className="font-Outfit hover:bg-violet-500 hover:rounded-sm py-1 px-3 "
               >
                 Contact me
               </a>
@@ -95,12 +100,20 @@ function NavBar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <button>
-            <Image src={assets.moon_icon} alt="moon-icon" className="w-6" />
+          <button onClick={() => setIsDarkMode((prev) => !prev)}>
+            <Image
+              src={isDarkMode ? assets.sun_icon : assets.moon_icon}
+              alt="moon-icon"
+              className="w-6"
+            />
           </button>
 
           <button className="block md:hidden ml-3" onClick={openMenu}>
-            <Image src={assets.menu_black} alt="menu-icon" className="w-6" />
+            <Image
+              src={isDarkMode ? assets.menu_white : assets.menu_black}
+              alt="menu-icon"
+              className="w-6"
+            />
           </button>
         </div>
 
@@ -108,12 +121,13 @@ function NavBar() {
 
         <ul
           ref={sideMenuRef}
-          className="flex md:hidden flex-col gap-4 py-20 px-8 fixed -right-64
-        top-0 bottom-0 w-56 z-50 h-screen bg-violet-300 transition duration-500"
+          className={`flex md:hidden flex-col gap-4 py-20 px-8 fixed -right-64
+        top-0 bottom-0 w-56 z-50 h-screen transition duration-500
+        ${isDarkMode ? "bg-violet-950" : "bg-violet-300"} `}
         >
           <div className="absolute right-6 top-6" onClick={closeMenu}>
             <Image
-              src={assets.close_black}
+              src={isDarkMode ? assets.close_white : assets.close_black}
               alt=""
               className="w-5 cursor-pointer"
             />

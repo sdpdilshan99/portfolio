@@ -2,14 +2,18 @@ import { assets, serviceData } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
 
-const Service = () => {
+const Service = ({ isDarkMode }) => {
   return (
-    <div id="service" className="w-full px-[10%] py-14 bg-gray-50">
-      <h2 className="text-center text-4xl font-semibold text-violet-700 mb-6">
+    <div id="service" className="w-full px-[10%] py-14 ">
+      <h2 className="text-center text-4xl font-semibold text-violet-400 mb-6">
         My Services
       </h2>
 
-      <p className="text-center max-w-4xl mx-auto mt-5 mb-12 font-Outfit text-gray-800 leading-relaxed">
+      <p
+        className={`text-center max-w-4xl mx-auto mt-5 mb-12 font-Outfit tracking-wide 
+      ${isDarkMode ? "text-white" : "text-gray-800"} 
+      leading-relaxed`}
+      >
         I'm a Full-Stack Developer specializing in the MERN stack (MongoDB,
         Express, React, Node.js). I build fast, scalable web apps that are
         responsive and user-friendly. Let's turn your ideas into reality with
@@ -20,7 +24,9 @@ const Service = () => {
         {serviceData.map(({ icon, title, description, link }, index) => (
           <div
             key={index}
-            className="service-card rounded-lg p-6 bg-gradient-to-br from-violet-400 via-indigo-500 to-purple-600 shadow-lg shadow-gray-500 hover:shadow-shadowhh  transition-all transform hover:scale-105"
+            className="service-card rounded-lg p-6 
+            bg-gradient-to-br from-violet-400 via-indigo-500 to-purple-600 shadow-lg 
+            shadow-gray-500 hover:shadow-gray-500  transition-all transform hover:scale-105 duration-500"
           >
             <Image src={icon} alt={title} className="w-14 mb-4" />
             <h3 className="text-lg font-semibold text-white mb-3">{title}</h3>
