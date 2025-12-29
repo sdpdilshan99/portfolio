@@ -31,7 +31,7 @@ const About = ({ isDarkMode }) => {
             height={800}
           />
         </div>
-        <div className="flex flex-col text-white">
+        <div className="flex flex-col text-slate-100">
           <p className="mb-10 max-w-2xl font-Outfit tracking-wide text-justify text-lg leading-relaxed">
             Hi, I'm Sadeep, a passionate Full-Stack Developer with a background in 
             Applied Science. I specialize in building AI-powered web applications using 
@@ -49,13 +49,13 @@ const About = ({ isDarkMode }) => {
                 <h3 className="text-lg font-semibold">Education</h3>
               </div>
               <div>
-                <p className="text-gray-300 text-md m-1">
+                <p className="text-slate-300 text-md m-1">
                   BSc. (Applied Science) Degree Program
                 </p>
-                <p className="text-gray-300 text-md m-1">
+                <p className="text-slate-300 text-md m-1">
                   Following Enterprise Application Development (Diploma Level)
                 </p>
-                <p className="text-gray-300 text-md m-1">Full-Stack MERN Specialization</p>
+                <p className="text-slate-300 text-md m-1">Full-Stack MERN Specialization</p>
               </div>
             </li>
           </ul>
