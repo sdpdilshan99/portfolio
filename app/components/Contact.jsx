@@ -9,7 +9,7 @@ const Contact = ({ isDarkMode }) => {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "2d82ee14-b49c-4679-b69c-22a82cbdbeb1");
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY);
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",

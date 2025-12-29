@@ -50,6 +50,7 @@ import mern_icon from "./mern.png";
 import api_icon from "./api.png";
 import twitter_dark_icon from "./twitter_dark.png";
 import github_dark_icon from "./github-dark.png";
+import electronic from "./electronic.png";
 
 export const assets = {
   user_image,
@@ -104,34 +105,39 @@ export const assets = {
   api_icon,
   twitter_dark_icon,
   github_dark_icon,
+  electronic
 };
 
 export const workData = [
   {
-    title: "Blog App",
-    description: "Web",
-    bgImage: "/work-1.png",
-  },
-  {
-    title: "Todo App",
-    description: "Web",
-    bgImage: "/work-2.png",
-  },
-  {
-    title: "Simple User Management System",
-    description: "Web",
-    bgImage: "/work-3.png",
-  },
-  {
-    title: "Portfolio",
-    description: "Web",
-    bgImage: "/work-4.png",
-  },
-  {
-    title: "UI/UX designing",
-    description: "UI/UX Design",
-    bgImage: "/work-4.png",
-  },
+        title: "AI Resume Analyzer & ATS Optimizer",
+        description: "Developed a full-stack AI tool using React Router 7 and Vite. Integrated Google Gemini 1.5 Flash AI for automated parsing and ATS scoring with Supabase PostgreSQL storage.",
+        link: "https://github.com/sdpdilshan99", 
+        bgImage: "/images/Resume_analyzer_display.png", 
+    },
+    {
+        title: "Real-Time Chat Application",
+        description: "Built a real-time messaging platform using Angular 19 and Firebase. Implemented Server-Side Rendering (SSR) and RxJS for reactive state management.",
+        link: "https://github.com/sdpdilshan99",
+        bgImage: "/work-2.png",
+    },
+    {
+        title: "Blog & User Management Systems",
+        description: "Engineered RESTful APIs with Node.js/Express and developed dynamic interfaces using React and MongoDB for secure data operations.",
+        link: "https://github.com/sdpdilshan99",
+        bgImage: "/work-3.png",
+    },
+    {
+        title: "Portfolio Website",
+        description: "A personal portfolio website built with React and Tailwind CSS to showcase my software engineering projects and technical skills.",
+        link: "https://github.com/sdpdilshan99",
+        bgImage: "/work-4.png",
+    },
+    {
+      title: "UI/UX designing",
+      description: "UI/UX Design",
+      bgImage: "/work-4.png",
+    },
 ];
 
 export const serviceData = [
@@ -164,6 +170,12 @@ export const serviceData = [
     link: "",
   },
   {
+    icon: assets.electronic, 
+    title: "AI & Automation",
+    description: "Integrating LLMs like Gemini 1.5 Flash to build intelligent applications, automated content generation, and smart data analysis tools.",
+    link: "",
+  },
+  {
     icon: assets.ui_icon,
     title: "UI/UX design",
     description:
@@ -184,13 +196,13 @@ export const infoList = [
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
     title: "Languages",
-    description: "HTML, CSS, JavaScript React Js, Next Js",
+    description: "JavaScript, TypeScript, PHP, Java, Python",
   },
   {
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
     title: "Education",
-    description: "B.Tech in Computer Science",
+    description: "BSc. (Applied Science) Degree",
   },
   {
     icon: assets.project_icon,
@@ -201,10 +213,10 @@ export const infoList = [
 ];
 
 export const toolsData = [
-  { icon: assets.vscode, name: "vscode" },
-  { icon: assets.tailwind_icon, name: "tailwind css" },
-  { icon: assets.mongodb, name: "mongodb" },
-  { icon: assets.figma, name: "figma" },
-  { icon: assets.intellij_icon, name: "intellij idea" },
-  { icon: assets.git, name: "git" },
+  { icon: assets.vscode, name: "VS Code" },
+  { icon: assets.tailwind_icon, name: "Tailwind CSS" },
+  { icon: assets.mongodb, name: "MongoDB" },
+  { icon: assets.figma, name: "Figma" },
+  { icon: assets.intellij_icon, name: "IntelliJ IDEA" },
+  { icon: assets.git, name: "Git" },
 ];

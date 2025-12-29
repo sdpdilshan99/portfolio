@@ -1,11 +1,13 @@
 "use client";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Header = ({ isDarkMode }) => {
   const [imgSrc, setImgSrc] = useState(assets.right_arrow_white);
   const [imgSrc1, setImgSrc1] = useState(assets.download_icon);
+  const [index, setIndex] = useState(0);
+
 
   const handleMouseEnter = () => {
     setImgSrc(assets.right_arrow_bold);
@@ -26,17 +28,28 @@ const Header = ({ isDarkMode }) => {
     "Frontend Developer",
     "Backend Developer",
     "Web Developer",
-    "Mern Stack Developer",
+    "MERN Stack Developer",
     "UI/UX Designer",
   ];
 
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % workSide.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+  
   return (
     <div id="home" className="flex flex-col items-center pt-32 mb-10">
       <div className="mb-5">
         <Image
-          src={assets.profile_img}
+          src="/images/profile.jpg"
           alt="profile-img"
-          className=" rounded-full w-32"
+          className="rounded-full w-40 object-cover border-2 border-gray-200 shadow-lg"
+          width={1000}  
+          height={1000}
+          priority
         />
       </div>
       <h3 className="text-center text-xl  ">Hi,</h3>
@@ -46,20 +59,21 @@ const Header = ({ isDarkMode }) => {
         <Image
           src={assets.hand_icon}
           alt="hand-image"
-          className="w-4 lg:w-8 sm:w-6"
+          className="w-4 lg:w-12 sm:w-6 animate-waving-hand origin-bottom"
+          priority
         />
       </h1>
 
       <h1
         className={` text-center text-4xl sm:text-5xl lg:text-6xl font-[500] tracking-wide
       ${isDarkMode ? "text-violet-400" : "text-violet-700"} `}
+      key={index}
       >
-        Full Stack Developer
+        {workSide[index]}
       </h1>
 
-      <p className=" max-w-2xl mx-auto pt-4 font-Outfit tracking-wide"></p>
 
-      <div className="flex flex-col sm:flex-row items-center gap-6 mt-20">
+      <div className="flex flex-col sm:flex-row items-center gap-6 mt-16">
         <a
           href="#contact"
           className="primary-btn font-Outfit"
@@ -70,7 +84,7 @@ const Header = ({ isDarkMode }) => {
           <Image src={imgSrc} alt="right-arrow-icon" className=" w-4 " />
         </a>
         <a
-          href="/sample-resume.pdf"
+          href="/SADEEP DILSHAN_Software_Engineer.pdf"
           download
           className=" primary-btn second-btn  font-Outfit"
           onMouseEnter={handleMouseEnter1}
@@ -81,7 +95,7 @@ const Header = ({ isDarkMode }) => {
         </a>
       </div>
 
-      <div className="flex mt-10 gap-4">
+      <div className="flex mt-16 gap-4">
         <a href="" className="">
           <Image
             src={isDarkMode ? assets.twitter_dark_icon : assets.twitter_icon}
