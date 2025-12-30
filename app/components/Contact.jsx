@@ -40,7 +40,7 @@ const Contact = ({ isDarkMode }) => {
         Contact
       </h2>
       <p
-        className="text-center max-w-4xl mx-auto mt-5 mb-10 font-Outfit tracking-wide 
+        className=" max-w-4xl mx-auto mt-5 mb-10 font-Outfit text-justify tracking-wide text-base sm:text-xl
       dark:text-white  text-gray-800 opacity-80 leading-relaxed"
       >
         Got an idea or a question? I’m always open to new opportunities and
@@ -79,7 +79,7 @@ const Contact = ({ isDarkMode }) => {
         ></textarea>
 
         <div className="w-full flex justify-center">
-          <button type="submit" className="primary-btn mt-5 !w-1/3">
+          <button type="submit" className="primary-btn mt-5 w-full ">
             Submit Now
           </button>
         </div>

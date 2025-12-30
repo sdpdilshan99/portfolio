@@ -26,7 +26,7 @@ function NavBar({ isDarkMode, setIsDarkMode }) {
   }, []);
 
   return (
-    <>
+    <div className="w-full">
       <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
         <Image
           src={assets.header_bg_color}
@@ -35,7 +35,7 @@ function NavBar({ isDarkMode, setIsDarkMode }) {
         />
       </div>
       <nav
-        className={`w-full fixed px-5 h-9 lg:px-8 xl:px-10 mt-1 flex items-center justify-between z-50 
+        className={`w-full fixed px-5 h-14 lg:px-8 xl:px-10 mt-1 flex items-center justify-between z-50 
         ${isScroll ? " bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}
         ${isDarkMode ? "bg-violet-950" : "bg-violet-50"}
         `}
@@ -160,7 +160,7 @@ function NavBar({ isDarkMode, setIsDarkMode }) {
           </li>
         </ul>
       </nav>
-    </>
+    </div>
   );
 }
 export default NavBar;

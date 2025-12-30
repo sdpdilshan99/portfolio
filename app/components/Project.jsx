@@ -19,21 +19,24 @@ const Project = ({ isDarkMode }) => {
       >
         My Projects
       </h2>
+      
+      
 
-      <p className="text-center max-w-4xl mx-auto mt-5 mb-12 text-white tracking-wide leading-relaxed">
+      <p className="text-justify text-sm sm:text-lg  max-w-4xl mx-auto mt-5 mb-12 text-white tracking-wide leading-relaxed">
         I believe design is more than just aesthetics—it's about creating
         experiences that connect and inspire. Every project I take on is an
         opportunity to craft something unique, blending creativity, strategy,
         and purpose. Take a look through my work, where passion meets
         innovation.
       </p>
+      
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10 ">
         {workData.map((project, index) => (
           <div
             key={index}
             style={{ backgroundImage: `url(${project.bgImage})` }}
-            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative 
+            className="w-full h-[350px] bg-no-repeat bg-cover bg-center rounded-lg relative 
             cursor-pointer group transform transition-all duration-500 hover:scale-105 
             hover:shadow-2xl shadow-md shadow-gray-700"
           >

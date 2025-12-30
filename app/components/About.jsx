@@ -31,8 +31,8 @@ const About = ({ isDarkMode }) => {
             height={800}
           />
         </div>
-        <div className="flex flex-col text-slate-100">
-          <p className="mb-10 max-w-2xl font-Outfit tracking-wide text-justify text-lg leading-relaxed">
+        <div className="flex flex-col text-slate-100 w-full">
+          <p className="mb-10 max-w-2xl w-full font-Outfit tracking-wide text-justify text-sm sm:text-lg text leading-relaxed">
             Hi, I'm Sadeep, a passionate Full-Stack Developer with a background in 
             Applied Science. I specialize in building AI-powered web applications using 
             the MERN Stack, React Router 7, and Angular 19. I leverage modern AI tools 
@@ -45,17 +45,17 @@ const About = ({ isDarkMode }) => {
             <li className={`border-[0.5px] rounded-xl p-6 cursor-pointer hover:-translate-y-2 transition-all duration-300 shadow-md hover:shadow-xl
               ${isDarkMode ? "border-violet-500/30 bg-violet-900/10" : "border-white/40 bg-white/10 backdrop-blur-sm"}`}>
               <div className="flex items-center gap-3">
-                <Image src={assets.edu_icon} alt="edu" className="w-8" />
-                <h3 className="text-lg font-semibold">Education</h3>
+                <Image src={assets.edu_icon} alt="edu" className="sm:w-8 w-6" />
+                <h3 className="sm:text-lg text-base font-semibold">Education</h3>
               </div>
-              <div>
-                <p className="text-slate-300 text-md m-1">
+              <div className="text-sm sm:text-base">
+                <p className="text-slate-300  m-1">
                   BSc. (Applied Science) Degree Program
                 </p>
-                <p className="text-slate-300 text-md m-1">
+                <p className="text-slate-300  m-1">
                   Following Enterprise Application Development (Diploma Level)
                 </p>
-                <p className="text-slate-300 text-md m-1">Full-Stack MERN Specialization</p>
+                <p className="text-slate-300 m-1">Full-Stack MERN Specialization</p>
               </div>
             </li>
           </ul>
